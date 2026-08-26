@@ -1,7 +1,4 @@
 function somar(x, y) {
-
-    let resultado = x + y
-
+    return x + y;
 }
-
-somar(5, 10)
+console.log(somar(5, 10));
