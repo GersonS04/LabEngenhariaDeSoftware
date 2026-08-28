@@ -1,17 +1,27 @@
-console.log('Qual alternativa corresponde a 120?')
-console.log('1) 50 + 60')
-console.log('2) 40 x 4')
-console.log('3) 5!')
-console.log('4) 600 / 4')
+const readline = require('readline');
 
-let resposta = prompt('Digite a alternativa que julgar correta: ')
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-const verificarResposta = (resposta) => {
-    if (Number(resposta) === 3) {
-        return 'Resposta correta!'
-    } else {
-        return 'Tente novamente!'
-    }
-}
+console.log('Qual alternativa corresponde a 120?');
+console.log('1) 50 + 60');
+console.log('2) 40 x 4');
+console.log('3) 5!');
+console.log('4) 600 / 4');
 
-console.log(verificarResposta(resposta))
+rl.question('Digite a alternativa que julgar correta: ', (resposta) => {
+
+    const verificarResposta = (resposta) => {
+        if (Number(resposta) === 3) {
+            return 'Resposta correta!';
+        } else {
+            return 'Tente novamente!';
+        }
+    };
+
+    console.log(verificarResposta(resposta));
+
+    rl.close();
+});
