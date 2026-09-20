@@ -2,16 +2,21 @@
 const campoProduto = document.getElementById("campoProduto");
 const btAdicionar = document.getElementById("btAdicionar");
 const listaProdutos = document.getElementById("listaProdutos");
+
 // Funcionalidade do Botão Adicionar
 btAdicionar.addEventListener("click", function() {
+
+    const produto = campoProduto.value.trim();
 
     if (produto === "") {
         alert("Digite um produto!");
         return; // Não permitir adicionar produtos "vazios" 
     }
 
-    const item = document.createElement("li"); // Cria o item na lista
-    item.textContent = produto;
+    const item = document.createElement("li");
+    
+    const textoProduto = document.createElement("span"); // Cria o texto do produto na lista
+    textoProduto.textContent = produto;
 
     // Área dos botões:
     const acoes = document.createElement("div");
@@ -43,7 +48,7 @@ btAdicionar.addEventListener("click", function() {
     // Organiza os elementos (DOM)
     acoes.appendChild(btEditar);
     acoes.appendChild(btExcluir);
-    item.appendChild(this.textoProduto);
+    item.appendChild(textoProduto);
     item.appendChild(acoes);
     listaProdutos.appendChild(item);
 
