@@ -87,9 +87,60 @@ const livro2 = {
     genero: "Fantasia"
 };
 
-livro1.idadePublicacao = anoAtual - livro1.anoPublicacao;
+livro2.idadePublicacao = anoAtual - livro2.anoPublicacao;
 
 const mostrarDetalhes = "Título: " + livro2.titulo + "\nAutor: " + livro2.autor + "\nAno de publicação: " + livro2.anoPublicacao + "\nGênero: " + livro2.genero + "\nIdade de Publicação: " + livro2.idadePublicacao + " anos.";
 
 console.log("\nExercício 10:");
 console.log(mostrarDetalhes);
+
+// Exercício11:
+const livro = {
+    titulo: "O Hobbit",
+    autor: "J. R. R. Tolkien",
+    anoPublicacao: 1937,
+    genero: "Fantasia",
+    idadePublicacao: 89
+};
+console.log("\nExercício 11:");
+console.log("Título: " + livro["titulo"]);
+console.log("Autor: " + livro["autor"]);
+console.log("Ano Publicação: " + livro["anoPublicacao"]);
+console.log("Gênero: " + livro["genero"]);
+console.log("Idade Publicação: " + livro["idadePublicacao"]);
+
+//Exercício12:
+const anoAtual2 = new Date().getFullYear();
+
+const livro3 = {
+    titulo: "O Hobbit",
+    autor: "J. R. R. Tolkien",
+    anoPublicacao: 1937,
+    genero: "Fantasia"
+};
+
+livro3.idadePublicacao = anoAtual2 - livro3.anoPublicacao;
+
+console.log("\nExercício 12:");
+
+const mostrarDetalhes2 = "Título: " + livro3.titulo + "\nAutor: " + livro3.autor + "\nAno de publicação: " + livro3.anoPublicacao + "\nGênero: " + livro3.genero + "\nIdade de Publicação: " + livro3.idadePublicacao + " anos.";
+
+console.log(mostrarDetalhes2);
+
+livro3.genero = "Aventura";
+
+console.log(livro3);
+
+// Exercicio13:
+const livro4 = {
+    titulo: "O Hobbit",
+    autor: "J. R. R. Tolkien",
+    anoPublicacao: 1937,
+    genero: "Fantasia",
+    idadePublicacao: 89,
+    editora: "HarperCollins"
+};
+console.log("\nExercício 12:");
+console.log(livro4);
+delete livro4.editora;
+console.log(livro4);
