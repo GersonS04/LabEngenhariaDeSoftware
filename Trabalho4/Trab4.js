@@ -140,7 +140,7 @@ const livro4 = {
     idadePublicacao: 89,
     editora: "HarperCollins"
 };
-console.log("\nExercício 12:");
+console.log("\nExercício 13:");
 console.log(livro4);
 delete livro4.editora;
 console.log(livro4);

@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formulario {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#CampoProduto {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+#btAdicionar {
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background-color: #2e7d32;
+    color: white;
+
+    font-size: 15px;
+}
+
+#btAdicionar:hover {
+    background-color: #256628;
+}
+
+#listaProdutos {
+    list-style: none;
+}
+
+.item-produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background-color: #f7f7f7;
+
+    border-radius: 8px;
+}
+
+.acoes {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-editar,
+.btn-excluir {
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #d99532;
+}
+
+.btn-excluir:hover {
+    background-color: #c9302c;
+}
