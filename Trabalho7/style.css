@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafd;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.calculadora {
+    width: 100%;
+    max-width: 360px;
+    padding: 22px;
+    background-color: #ffffff;
+    border: 1px solid #e0e5ec;
+    border-radius: 28px;
+    box-shadow: 0 8px 30px rgba(60, 64, 67, 0.10);
+}
+
+.visor {
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px 8px 22px;
+    margin-bottom: 18px;
+    background-color: #f1f4f9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+#expressao {
+    min-height: 25px;
+    color: #687586;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#resultado {
+    width: 100%;
+    color: #303b49;
+    font-size: 54px;
+    font-weight: 400;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+button {
+    aspect-ratio: 1;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s,
+        transform 0.1s,
+        box-shadow 0.15s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.numero {
+    background-color: #edf0f5;
+    color: #354052;
+}
+
+.numero:hover {
+    background-color: #e1e6ef;
+}
+
+.especial {
+    background-color: #e2e7ef;
+    color: #354052;
+}
+
+.especial:hover {
+    background-color: #d5dce7;
+}
+
+.operador {
+    background-color: #d8e7ff;
+    color: #1765d1;
+}
+
+.operador:hover {
+    background-color: #c6dcff;
+}
+
+.operador.selecionado {
+    background-color: #1765d1;
+    color: #ffffff;
+}
+
+button:active {
+    transform: scale(0.94);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.zero {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 40px;
+    text-align: left;
+    padding-left: 28px;
+}
+
+@media (max-width: 380px) {
+    .calculadora {
+        padding: 15px;
+    }
+
+    .botoes {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 21px;
+    }
+
+    #resultado {
+        font-size: 46px;
+    }
+}

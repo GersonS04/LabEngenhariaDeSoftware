@@ -1,138 +1,129 @@
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8fafd;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.calculadora {
-    width: 100%;
-    max-width: 360px;
-    padding: 22px;
-    background-color: #ffffff;
-    border: 1px solid #e0e5ec;
-    border-radius: 28px;
-    box-shadow: 0 8px 30px rgba(60, 64, 67, 0.10);
+.contador {
+    background-color: white;
+    width: 380px;
+    max-width: 95%;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.visor {
-    height: 155px;
+h1 {
+    font-size: 23px;
+    color: #202124;
+    margin: 0 0 25px;
+}
+
+.categorias {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 15px 8px 22px;
-    margin-bottom: 18px;
-    background-color: #f1f4f9;
-    border-radius: 18px;
-    overflow: hidden;
+    justify-content: space-around;
+    gap: 15px;
 }
 
-#expressao {
-    min-height: 25px;
-    color: #687586;
-    font-size: 18px;
-    margin-bottom: 8px;
+.categoria {
+    flex: 1;
+    padding: 15px 8px;
+    border-radius: 12px;
 }
 
-#resultado {
-    width: 100%;
-    color: #303b49;
-    font-size: 54px;
-    font-weight: 400;
-    text-align: right;
-    white-space: nowrap;
-    overflow: hidden;
+.homens {
+    background-color: #e8f0fe;
 }
 
-.botoes {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+.mulheres {
+    background-color: #fce7f3;
 }
 
-button {
-    aspect-ratio: 1;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.15s,
-                transform 0.1s,
-                box-shadow 0.15s;
-    -webkit-tap-highlight-color: transparent;
+.boneco {
+    width: 65px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+}
+
+.homens .boneco {
+    fill: #2463b9;
+}
+
+.mulheres .boneco {
+    fill: #be397c;
 }
 
 .numero {
-    background-color: #edf0f5;
-    color: #354052;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #202124;
 }
 
-.numero:hover {
-    background-color: #e1e6ef;
+.categoria h2 {
+    font-size: 17px;
+    margin: 8px 0 15px;
+    color: #333;
 }
 
-.especial {
-    background-color: #e2e7ef;
-    color: #354052;
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
 }
 
-.especial:hover {
-    background-color: #d5dce7;
+button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    transition: transform 0.1s, opacity 0.2s;
 }
 
-.operador {
-    background-color: #d8e7ff;
-    color: #1765d1;
-}
-
-.operador:hover {
-    background-color: #c6dcff;
-}
-
-.operador.selecionado {
-    background-color: #1765d1;
-    color: #ffffff;
+button:hover {
+    opacity: 0.75;
 }
 
 button:active {
     transform: scale(0.94);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.zero {
-    grid-column: span 2;
-    aspect-ratio: auto;
-    border-radius: 40px;
-    text-align: left;
-    padding-left: 28px;
+.homens button {
+    color: #2463b9;
 }
 
-@media (max-width: 380px) {
-    .calculadora {
-        padding: 15px;
-    }
+.mulheres button {
+    color: #be397c;
+}
 
-    .botoes {
-        gap: 8px;
-    }
+.total {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
 
-    button {
-        font-size: 21px;
-    }
+.total h2 {
+    font-size: 16px;
+    color: #5f6368;
+}
 
-    #resultado {
-        font-size: 46px;
-    }
+.total p {
+    font-size: 38px;
+    font-weight: bold;
+    color: #1765d1;
+    margin: 10px 0 0;
 }
