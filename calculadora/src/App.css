@@ -1,0 +1,31 @@
+.calculadora {
+  width: 340px; max-width: 100%; padding: 22px;
+  border: 1px solid #e5e8ef; border-radius: 22px;
+  background: #fff; box-shadow: 0 8px 28px rgba(40,55,80,.10);
+}
+.calculadora h1 { margin: 0 0 18px; color: #3c4043; font-size: 21px; font-weight: 500; }
+.visor {
+  min-height: 105px; padding: 15px 14px; margin-bottom: 16px;
+  border-radius: 12px; background: #f1f4f9; text-align: right;
+  display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
+}
+.expressao { min-height: 20px; margin: 0 0 7px; color: #737983; font-size: 14px; overflow-wrap: anywhere; }
+.resultado { margin: 0; color: #202124; font-size: 36px; font-weight: 500; overflow-wrap: anywhere; }
+.botoes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.botao {
+  min-width: 0; height: 56px; border: 0; border-radius: 12px;
+  background: #edf0f5; color: #34383f; font-size: 21px; cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.botao:hover { background: #e1e6ee; }
+.botao:active { transform: scale(.96); }
+.botao.especial { background: #e2e7ef; color: #424852; }
+.botao.operador { background: #d8e7ff; color: #1765d1; font-weight: 600; }
+.botao.operador:hover { background: #c4dbff; }
+.botao.operador.selecionado { background: #1765d1; color: #fff; }
+.botao.zero { grid-column: span 2; }
+@media (max-width: 380px) {
+  .calculadora { padding: 16px; }
+  .botoes { gap: 8px; }
+  .botao { height: 52px; }
+}
