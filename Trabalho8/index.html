@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .cartao {
+            background-color: white;
+            width: 90%;
+            max-width: 700px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cartao img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #3268d8;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #333333;
+            font-size: 21px;
+        }
+
+        p {
+            color: #555555;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Apresentação() {
+            return (
+                <div className="cartao">
+                    <img
+                        src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/1/2020/10/DSC03870.jpg"
+                        alt="Prédio da FATECPP"
+                    />
+
+                    <h1>Gerson Scolari Barbosa</h1>
+
+                    <h2>Curso: Análise e Desenvolvimento de Sistemas</h2>
+
+                    <p>Seja bem-vindo à nossa faculdade!</p>
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(
+            <Apresentação />
+        );
+    </script>
+
+</body>
+
+</html>

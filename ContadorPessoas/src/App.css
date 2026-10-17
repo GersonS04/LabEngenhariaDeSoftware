@@ -1,0 +1,125 @@
+.contador {
+  width: 380px;
+  max-width: 100%;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contador h1 {
+  margin: 0 0 25px;
+  color: #202124;
+  font-size: 24px;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.categoria {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 8px;
+  border-radius: 12px;
+}
+
+.homens {
+  background: #e8f0fe;
+}
+
+.mulheres {
+  background: #fce7f3;
+}
+
+.boneco {
+  display: block;
+  width: 65px;
+  height: 90px;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.homens .boneco,
+.homens button {
+  color: #2463b9;
+}
+
+.mulheres .boneco,
+.mulheres button {
+  color: #be397c;
+}
+
+.numero {
+  margin: 12px 0;
+  color: #202124;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.categoria h2 {
+  margin: 8px 0 15px;
+  color: #333333;
+  font-size: 17px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.botoes button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+
+.botoes button:hover {
+  opacity: 0.75;
+}
+
+.botoes button:active {
+  transform: scale(0.94);
+}
+
+.total {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.total h2 {
+  color: #5f6368;
+  font-size: 16px;
+}
+
+.total p {
+  margin: 10px 0 0;
+  color: #1765d1;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+@media (max-width: 420px) {
+  .contador {
+    padding: 18px;
+  }
+
+  .categorias {
+    gap: 10px;
+  }
+
+  .categoria {
+    padding: 12px 5px;
+  }
+}
