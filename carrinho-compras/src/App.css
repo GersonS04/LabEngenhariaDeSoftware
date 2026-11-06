@@ -1,0 +1,38 @@
+.pagina { width: min(100%, 900px); margin: 0 auto; padding: 30px 0; }
+.topo { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:26px; }
+.topo h1 { margin:0; color:#202b3c; font-size:27px; }
+.etiqueta { margin:0 0 6px; color:#64748b; font-size:11px; font-weight:bold; letter-spacing:1.3px; }
+.contador { padding:11px 15px; border:1px solid #e1e7f0; border-radius:12px; background:#fff; color:#344054; font-weight:bold; white-space:nowrap; }
+.painel { margin-bottom:22px; padding:24px; border:1px solid #e5eaf2; border-radius:18px; background:#fff; box-shadow:0 5px 18px #2332500a; }
+.painel h2 { margin:0 0 18px; color:#202b3c; font-size:23px; }
+.produtos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.produto,.item { display:flex; align-items:center; gap:12px; padding:14px; border:1px solid #e7ecf3; border-radius:13px; background:#fbfcff; }
+.emoji { display:grid; place-items:center; flex-shrink:0; width:52px; height:52px; border-radius:12px; background:#edf3ff; font-size:27px; }
+.detalhes { flex:1; min-width:0; display:flex; flex-direction:column; gap:5px; }
+.detalhes small { color:#758198; font-size:12px; }
+.detalhes h3 { margin:0; color:#283548; font-size:15px; }
+.detalhes strong { color:#1765d1; font-size:14px; }
+.adicionar,.finalizar { border:0; border-radius:9px; background:#1765d1; color:white; font-weight:bold; cursor:pointer; }
+.adicionar { padding:10px 12px; }
+.adicionar:hover,.finalizar:not(:disabled):hover { background:#0f51ad; }
+.badge { display:inline-grid; place-items:center; min-width:28px; height:28px; border-radius:50%; background:#e5efff; color:#1765d1; font-size:14px; }
+.vazio { padding:25px 10px; text-align:center; color:#697586; }
+.vazio span { font-size:35px; }.vazio h3 { margin:10px 0 5px; color:#344054; }.vazio p { margin:0; font-size:14px; }
+.item { margin-bottom:10px; background:white; border-color:#edf0f5; }
+.acoes { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.quantidade { display:flex; align-items:center; gap:10px; padding:4px; border:1px solid #e1e7f0; border-radius:9px; }
+.quantidade button { width:27px; height:27px; border:0; border-radius:6px; background:#edf3ff; color:#1765d1; font-size:18px; cursor:pointer; }
+.quantidade span { min-width:14px; text-align:center; font-weight:bold; }
+.remover { border:0; background:transparent; color:#c24141; font-size:12px; cursor:pointer; }
+.resumo { margin-top:20px; padding:18px; border-radius:13px; background:#f6f8fc; }
+.resumo > div { display:flex; justify-content:space-between; gap:12px; color:#667085; font-size:14px; }
+.resumo > div strong { color:#344054; }
+.resumo .total { margin-top:14px; padding-top:14px; border-top:1px solid #e1e7f0; }
+.resumo .total span { color:#202b3c; font-size:16px; font-weight:bold; }
+.resumo .total strong { color:#1765d1; font-size:24px; }
+.finalizar { width:100%; margin-top:18px; padding:13px; font-size:15px; }
+.finalizar:disabled { background:#c7cfdb; cursor:not-allowed; }
+.nota { display:block; margin-top:10px; color:#7a8495; font-size:11px; text-align:center; }
+footer { padding:2px 0 16px; color:#7a8495; font-size:12px; text-align:center; }
+@media(max-width:680px) { .pagina{padding:16px 0}.topo{align-items:flex-start;flex-direction:column}.topo h1{font-size:23px}.painel{padding:16px}.produtos{grid-template-columns:1fr} }
+@media(max-width:430px) { .produto{flex-wrap:wrap}.adicionar{width:100%}.item{align-items:flex-start;flex-wrap:wrap}.acoes{margin-left:auto}.resumo .total strong{font-size:20px} }
